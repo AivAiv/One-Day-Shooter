@@ -17,8 +17,11 @@ public class DeathUI : MonoBehaviour
         nameText.text = userInfo.name;
         killCounter.text = userInfo.kills.ToString();
         leaderboard.Data.Sort((a, b) => b.kills.CompareTo(a.kills));
-        if (leaderboard.Data[9].kills > userInfo.kills) return;
-        if (leaderboard.Data.Count >= 10) leaderboard.Data.Remove(leaderboard.Data.Last());
+        if (leaderboard.Data.Count >= 10)
+        {
+            if (leaderboard.Data[9].kills > userInfo.kills) return; 
+            leaderboard.Data.Remove(leaderboard.Data.Last());
+        }
         leaderboard.Data.Add(new DataItem(userInfo.name, userInfo.kills));
     }
 
