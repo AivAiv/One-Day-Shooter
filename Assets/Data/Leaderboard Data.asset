@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af7aa11b53c43cc9e48530b10982964, type: 3}
   m_Name: Leaderboard Data
   m_EditorClassIdentifier: 
+  data: []

@@ -960,7 +960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603197235}
   - component: {fileID: 603197236}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1037,7 +1037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636667115}
   - component: {fileID: 636667116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1259088307}
   - component: {fileID: 1259088308}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1750,7 +1750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276384769}
   - component: {fileID: 1276384770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Border Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1833,6 +1833,10 @@ PrefabInstance:
     - target: {fileID: 935760367895470080, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
       propertyPath: m_Name
       value: SmallWoodCottage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 935760367895470080, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6702719955590770569, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
       propertyPath: m_SortingOrder
@@ -1954,6 +1958,10 @@ PrefabInstance:
     - target: {fileID: 9198325881462859639, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
       propertyPath: m_Name
       value: BlueSaloon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9198325881462859639, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2465,12 +2473,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LargeWoodCabin
       objectReference: {fileID: 0}
+    - target: {fileID: 7925313371228700279, guid: 70d21491a949e8c498b4150d91c1e1a5, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d21491a949e8c498b4150d91c1e1a5, type: 3}
---- !u!1001 &1898052929735847818
+--- !u!1001 &538315823588129002
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2478,47 +2490,47 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7185793878045728508, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 753424964550014281, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_Name
-      value: Zombie
+      value: Constant Enemy Spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.64
+      value: -8.77
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.64
+      value: -6.49
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7569334082198710442, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+    - target: {fileID: 3750930403066880855, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -2526,7 +2538,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3b29edbf050b0c2ac9cbf1c8f8ac6259, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: d2fd1b113933e8609a038ce8b70252dc, type: 3}
 --- !u!1001 &2039067370422452671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2660,6 +2672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueSaloon
       objectReference: {fileID: 0}
+    - target: {fileID: 9198325881462859639, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2676,6 +2692,10 @@ PrefabInstance:
     - target: {fileID: 935760367895470080, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
       propertyPath: m_Name
       value: SmallWoodCottage
+      objectReference: {fileID: 0}
+    - target: {fileID: 935760367895470080, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6702719955590770569, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
       propertyPath: m_SortingOrder
@@ -2741,7 +2761,7 @@ SceneRoots:
   - {fileID: 569542579}
   - {fileID: 1204325483}
   - {fileID: 2039067370422452671}
-  - {fileID: 1898052929735847818}
   - {fileID: 1171240335}
   - {fileID: 2042053415}
   - {fileID: 2074718811}
+  - {fileID: 538315823588129002}
