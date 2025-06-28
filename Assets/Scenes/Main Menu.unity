@@ -1011,7 +1011,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 544796042}
-  startButton: {fileID: 940909036}
 --- !u!4 &1199027740
 Transform:
   m_ObjectHideFlags: 0
@@ -1752,7 +1751,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1199027739}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: GoToLeaderboard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

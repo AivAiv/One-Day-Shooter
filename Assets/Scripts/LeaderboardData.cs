@@ -11,5 +11,5 @@ public class LeaderboardData : ScriptableObject
     /// <summary>
     /// Leaderboard data
     /// </summary>
-    public List<(string name, int kills, DateTime date)> Data { get; }
+    public List<(string name, int kills, DateTime date)> Data { get; } = new();
 }
