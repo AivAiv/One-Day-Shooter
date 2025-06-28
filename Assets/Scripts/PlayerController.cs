@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float deathAnimationTime = 5f;
     [SerializeField] private GameObject deathUI;
-    public bool IsDead = false;
+    public bool IsDead;
+    [SerializeField] private GameObject HUD;
     
     private PlayerInputActions _inputActions;
     private Vector2 _moveInput;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator StartDeathAnimation()
     {
         yield return new WaitForSeconds(deathAnimationTime);
+        HUD.SetActive(false);
         deathUI.SetActive(true);
     }
 }
