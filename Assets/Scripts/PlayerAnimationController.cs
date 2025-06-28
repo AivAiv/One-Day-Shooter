@@ -27,8 +27,6 @@ public class PlayerAnimationController : MonoBehaviour
     {
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsShooting", false);
-        animator.SetFloat("MoveX", x);
-        animator.SetFloat("MoveY", y);
         animator.SetInteger("Facing", lastFacing);
     }
 
@@ -37,22 +35,17 @@ public class PlayerAnimationController : MonoBehaviour
         animator.SetBool("IsMoving", true);
         animator.SetBool("IsShooting", false);
         
-        if (y > 0 && x < y) {
-            lastFacing = 1;
-        }
-        else if (x > 0 && x > y) {
-            lastFacing = 2;
-        }
-        else if (y < 0 && x < y) {
-            lastFacing = 3;
-        }
-        else if (x < 0 && x > y)
+        if (Mathf.Abs(x) > Mathf.Abs(y))
         {
-            lastFacing = 4;
+            // destra o sinistra
+            lastFacing = x > 0 ? 0 : 0;
         }
-
-        animator.SetFloat("MoveX", x);
-        animator.SetFloat("MoveY", y);
+        else if (Mathf.Abs(y) > 0)
+        {
+            // su o giù
+            lastFacing = y > 0 ? 1 : 3;
+        }
+            Debug.Log(lastFacing);
     }
 
     public void Shoot(float x, float y)

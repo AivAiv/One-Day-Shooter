@@ -34,10 +34,9 @@ public class PlayerController : MonoBehaviour
         _inputActions.Standard.Movement.performed += ctx =>
         {
             _moveInput = ctx.ReadValue<Vector2>();
-            if (_moveInput.x == 0 && _moveInput.y == 0) OnIdle?.Invoke(_moveInput.x, _moveInput.y);
-            else OnWalk?.Invoke(_moveInput.x, _moveInput.y);
+            OnWalk?.Invoke(_moveInput.x, _moveInput.y);
         };
-        _inputActions.Standard.Movement.canceled += _ => _moveInput = Vector2.zero;
+        _inputActions.Standard.Movement.canceled += _ => { _moveInput = Vector2.zero; OnIdle?.Invoke(_moveInput.x, _moveInput.y); };
     }
 
     private void OnDisable()
