@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     private PlayerInputActions _inputActions;
     private Vector2 _moveInput;
     private Rigidbody2D _rb;
+    
+    /// <summary>
+    /// The inputs provided by the user
+    /// </summary>
+    public PlayerInputActions InputActions => _inputActions;
 
     private void Awake()
     {
