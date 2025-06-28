@@ -9,7 +9,7 @@ public class LeaderboardManager : MonoBehaviour
      
      private void Start()
      {
-          foreach (var data in leaderboardData.Data)
+          foreach (var data in leaderboardData.data)
           {
                var leaderboardItem = Instantiate(leaderboardItemPrefab, leaderboardItemContainer.transform);
                leaderboardItem.GetComponent<LeaderboardItem>().SetData(data);

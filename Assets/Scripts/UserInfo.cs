@@ -9,5 +9,10 @@ public class UserInfo : ScriptableObject
     /// <summary>
     /// The name of the current user
     /// </summary>
-    public string Name { get; set; }
+    public new string name;
+
+    /// <summary>
+    /// The kills done by the current user
+    /// </summary>
+    public int kills;
 }
