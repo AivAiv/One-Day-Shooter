@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallWoodCottage (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6702719955590770569, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8828704759125862307, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -397,6 +401,10 @@ PrefabInstance:
     - target: {fileID: 5192790362905901606, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284505220138145981, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9198325881462859639, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
       propertyPath: m_Name
@@ -547,6 +555,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7467187197282898804, guid: 70d21491a949e8c498b4150d91c1e1a5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7925313371228700279, guid: 70d21491a949e8c498b4150d91c1e1a5, type: 3}
       propertyPath: m_Name
       value: LargeWoodCabin
@@ -564,6 +576,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3433034432548834303, guid: 3c473f13aeb81b04ab6af735b99146c3, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3521050655839446135, guid: 3c473f13aeb81b04ab6af735b99146c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -669,6 +685,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5284505220138145981, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9198325881462859639, guid: 6e3d7927089e6c74bb55d091d6ac0297, type: 3}
       propertyPath: m_Name
       value: BlueSaloon
@@ -689,6 +709,10 @@ PrefabInstance:
     - target: {fileID: 935760367895470080, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
       propertyPath: m_Name
       value: SmallWoodCottage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702719955590770569, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8828704759125862307, guid: 9cfb2bc76d609d94290edbe1f4958ff4, type: 3}
       propertyPath: m_LocalScale.x
