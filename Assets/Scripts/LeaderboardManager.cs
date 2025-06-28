@@ -9,6 +9,7 @@ public class LeaderboardManager : MonoBehaviour
      
      private void Start()
      {
+          leaderboardData.Data.Sort((a, b) => b.kills.CompareTo(a.kills));
           foreach (var data in leaderboardData.Data)
           {
                var leaderboardItem = Instantiate(leaderboardItemPrefab, leaderboardItemContainer.transform);
