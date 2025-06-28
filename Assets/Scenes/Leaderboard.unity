@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leaderboardItemPrefab: {fileID: 4691015415622160322, guid: 1bde49e5a17957d3bbaf04417bc918d0, type: 3}
-  leaderboardData: {fileID: 11400000, guid: f69be2a8e538fdc25bbb04a0b367695e, type: 2}
+  leaderboardData: {fileID: 11400000, guid: b55e57fd433a9992dab9caf53d317aa1, type: 2}
   leaderboardItemContainer: {fileID: 2123555394}
 --- !u!1 &1302844168
 GameObject:
