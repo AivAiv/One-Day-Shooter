@@ -7,10 +7,10 @@ public class LeaderboardItem : MonoBehaviour
     [SerializeField] private TMP_Text kill;
     [SerializeField] private TMP_Text date;
     
-    public void SetData(DataItem item)
+    public void SetData((string name, int kills, DateTime date) data)
     {
-        username.text = item.name;
-        kill.text = item.kills.ToString();
-        date.text = item.GetDate().ToString("dd/MM/yyyy");
+        username.text = data.name;
+        kill.text = data.kills.ToString();
+        date.text = data.date.ToString("dd/MM/yyyy");
     }
 }
