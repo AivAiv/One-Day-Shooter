@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     private Rigidbody2D _rb;
 
+    public event Action<float, float> OnIdle;
+    public event Action<float, float> OnWalk;
+    public event Action OnDeath;
+
     private void Awake()
     {
         _inputActions = new PlayerInputActions();
@@ -23,6 +28,8 @@ public class PlayerController : MonoBehaviour
         _inputActions.Standard.Movement.performed += ctx =>
         {
             _moveInput = ctx.ReadValue<Vector2>();
+            if (_moveInput.x == 0 && _moveInput.y == 0) OnIdle?.Invoke(_moveInput.x, _moveInput.y);
+            else OnWalk?.Invoke(_moveInput.x, _moveInput.y);
         };
         _inputActions.Standard.Movement.canceled += _ => _moveInput = Vector2.zero;
     }
@@ -40,6 +47,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag("Zombie")) return;
+        OnDeath?.Invoke();
         _inputActions.Disable();
         StartCoroutine(StartDeathAnimation());
     }

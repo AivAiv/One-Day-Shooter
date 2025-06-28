@@ -2539,6 +2539,10 @@ PrefabInstance:
       propertyPath: deathUI
       value: 
       objectReference: {fileID: 2074718807}
+    - target: {fileID: 601004262975413843, guid: 3c473f13aeb81b04ab6af735b99146c3, type: 3}
+      propertyPath: deathAnimationTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3433034432548834303, guid: 3c473f13aeb81b04ab6af735b99146c3, type: 3}
       propertyPath: m_FlipX
       value: 0

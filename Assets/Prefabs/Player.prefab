@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3433034432548834303}
   - component: {fileID: 4002309050744000917}
   - component: {fileID: 601004262975413843}
+  - component: {fileID: 8558154260480020339}
   - component: {fileID: 3162411436121015530}
   m_Layer: 0
   m_Name: Player
@@ -167,8 +168,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  deathAnimationTime: 1
+  deathAnimationTime: 4
   deathUI: {fileID: 0}
+--- !u!114 &8558154260480020339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899505945349923423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2044d266e42f2004bba3728fd6df3cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4002309050744000917}
+  player: {fileID: 601004262975413843}
 --- !u!50 &3162411436121015530
 Rigidbody2D:
   serializedVersion: 4
