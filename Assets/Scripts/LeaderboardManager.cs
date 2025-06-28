@@ -9,7 +9,6 @@ public class LeaderboardManager : MonoBehaviour
      
      private void Start()
      {
-          Debug.Log(leaderboardData.Data.Count);
           foreach (var data in leaderboardData.Data)
           {
                var leaderboardItem = Instantiate(leaderboardItemPrefab, leaderboardItemContainer.transform);
