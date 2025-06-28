@@ -123,7 +123,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 2012694645, guid: fe34c3c3ae511114296e79bacaf08f80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -228,4 +228,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1297675962880394438, guid: cb985edbae0db3a1eaf3a58a1ba4cebd, type: 3}
-  projectileSpeed: 30
+  projectileSpeed: 15
