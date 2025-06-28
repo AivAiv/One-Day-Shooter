@@ -15,7 +15,7 @@ public class DeathUI : MonoBehaviour
     {
         nameText.text = userInfo.name;
         killCounter.text = userInfo.kills.ToString();
-        leaderboard.data.Add(new DataItem(userInfo.name, userInfo.kills));
+        leaderboard.Data.Add(new DataItem(userInfo.name, userInfo.kills));
     }
 
     public void BackToMainMenu() => SceneManager.LoadScene("Main Menu");

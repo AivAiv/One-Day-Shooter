@@ -11,6 +11,6 @@ public class LeaderboardItem : MonoBehaviour
     {
         username.text = item.name;
         kill.text = item.kills.ToString();
-        date.text = item.date.ToString("MM/dd/yyyy");
+        date.text = item.GetDate().ToString("dd/MM/yyyy");
     }
 }

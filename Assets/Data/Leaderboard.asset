@@ -10,6 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1af7aa11b53c43cc9e48530b10982964, type: 3}
-  m_Name: Leaderboard Data
+  m_Name: Leaderboard
   m_EditorClassIdentifier: 
-  data: []
+  Data:
+  - name: adsf
+    kills: 4
+    timestamp: 1324134
+  - name: fdsa
+    kills: 3
+    timestamp: 1324134
+  - name: hdg
+    kills: 9
+    timestamp: 134134134

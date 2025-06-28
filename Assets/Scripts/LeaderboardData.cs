@@ -11,7 +11,7 @@ public class LeaderboardData : ScriptableObject
     /// <summary>
     /// Leaderboard data
     /// </summary>
-    public List<DataItem> data = new();
+    public List<DataItem> Data = new();
 }
 
 [Serializable]
@@ -19,12 +19,14 @@ public class DataItem
 {
     public string name;
     public int kills;
-    public DateTime date;
+    public long timestamp;
     
     public DataItem(string name, int kills)
     {
         this.name = name;
         this.kills = kills;
-        date = DateTime.Now;
+        timestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
     }
+    
+    public DateTime GetDate() => DateTimeOffset.FromUnixTimeSeconds(timestamp).DateTime;
 }
