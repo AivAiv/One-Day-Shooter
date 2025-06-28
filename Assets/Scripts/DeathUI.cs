@@ -9,20 +9,19 @@ public class DeathUI : MonoBehaviour
     // setup kill counter to show the right values
     [SerializeField] private TMP_Text killCounter;
     [SerializeField] private TMP_Text nameText;
-    [SerializeField] private UserInfo userInfo;
     [SerializeField] private LeaderboardData leaderboard;
     
     private void OnEnable()
     {
-        nameText.text = userInfo.name;
-        killCounter.text = userInfo.kills.ToString();
+        nameText.text = SessionData.Name;
+        killCounter.text = SessionData.Kills.ToString();
         leaderboard.Data.Sort((a, b) => b.kills.CompareTo(a.kills));
         if (leaderboard.Data.Count >= 10)
         {
-            if (leaderboard.Data[9].kills > userInfo.kills) return; 
+            if (leaderboard.Data[9].kills > SessionData.Kills) return; 
             leaderboard.Data.Remove(leaderboard.Data.Last());
         }
-        leaderboard.Data.Add(new DataItem(userInfo.name, userInfo.kills));
+        leaderboard.Data.Add(new DataItem(SessionData.Name, SessionData.Kills));
     }
 
     public void BackToMainMenu() => SceneManager.LoadScene("Main Menu");

@@ -8,12 +8,11 @@ using UnityEngine.SceneManagement;
 public class MainMenuUI : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameInputField;
-    [SerializeField] private UserInfo userInfo;
-
+    
     private void Start()
     {
-        if (string.IsNullOrEmpty(userInfo.name)) return;
-        nameInputField.text = userInfo.name;
+        if (string.IsNullOrEmpty(SessionData.Name)) return;
+        nameInputField.text = SessionData.Name;
     }
     
     /// <summary>
@@ -27,7 +26,7 @@ public class MainMenuUI : MonoBehaviour
             return;
         }
 
-        userInfo.name = nameInputField.text;
+        SessionData.Name = nameInputField.text;
         SceneManager.LoadScene("Game");
     }
     
@@ -36,6 +35,7 @@ public class MainMenuUI : MonoBehaviour
     /// </summary>
     public void GoToLeaderboard()
     {
+        SessionData.Name = nameInputField.text;
         SceneManager.LoadScene("Leaderboard");
     }
 }

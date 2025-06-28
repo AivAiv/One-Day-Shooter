@@ -19,16 +19,17 @@ public class ProjectileShooter : MonoBehaviour
 
     private void FireProjectile()
     {
-        var mouseWorldPos = _mainCamera.ScreenToWorldPoint(
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y,
-                _mainCamera.transform.position.y - transform.position.y)
-        );
+        var mouseScreenPos = Input.mousePosition;
+        mouseScreenPos.z = Mathf.Abs(_mainCamera.transform.position.z); // Distance from camera to plane
+        var mouseWorldPos = _mainCamera.ScreenToWorldPoint(mouseScreenPos);
 
         var fireDirection = (mouseWorldPos - transform.position).normalized;
+        var angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
+        var rotation = Quaternion.Euler(0, 0, angle);
         var projectile = Instantiate(
             projectilePrefab,
             transform.position,
-            Quaternion.LookRotation(fireDirection)
+            rotation
         );
 
         if (!projectile.TryGetComponent<Rigidbody2D>(out var rb)) return;
