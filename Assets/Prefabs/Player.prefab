@@ -169,8 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  deathAnimationTime: 4
+  deathAnimationTime: 2
   deathUI: {fileID: 0}
+  IsDead: 0
+  HUD: {fileID: 0}
 --- !u!114 &8558154260480020339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4002309050744000917}
   player: {fileID: 601004262975413843}
+  lastFacing: 3
 --- !u!50 &3162411436121015530
 Rigidbody2D:
   serializedVersion: 4
@@ -226,4 +229,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1297675962880394438, guid: cb985edbae0db3a1eaf3a58a1ba4cebd, type: 3}
   projectileSpeed: 30
-  fireKey: 323

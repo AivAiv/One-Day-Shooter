@@ -45,7 +45,6 @@ public class PlayerAnimationController : MonoBehaviour
             // su o giù
             lastFacing = y > 0 ? 1 : 3;
         }
-            Debug.Log(lastFacing);
     }
 
     public void Shoot(float x, float y)

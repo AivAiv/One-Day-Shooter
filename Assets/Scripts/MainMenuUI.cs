@@ -28,7 +28,7 @@ public class MainMenuUI : MonoBehaviour
         }
 
         userInfo.name = nameInputField.text;
-        SceneManager.LoadScene("Game Scene");
+        SceneManager.LoadScene("Game");
     }
     
     /// <summary>
