@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float deathAnimationTime = 5f;
     [SerializeField] private GameObject deathUI;
+    public bool IsDead = false;
     
     private PlayerInputActions _inputActions;
     private Vector2 _moveInput;
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag("Zombie")) return;
+        IsDead = true;
         OnDeath?.Invoke();
         _inputActions.Disable();
         StartCoroutine(StartDeathAnimation());

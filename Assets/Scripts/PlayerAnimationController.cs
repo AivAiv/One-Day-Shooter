@@ -18,7 +18,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void Die()
     {
-        animator.SetBool("IsDead", true);
+        animator.SetTrigger("IsDead");
         animator.SetBool("IsShooting", false);
         animator.SetBool("IsMoving", false);
     }
