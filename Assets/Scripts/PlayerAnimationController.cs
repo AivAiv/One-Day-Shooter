@@ -6,51 +6,99 @@ public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerController player;
+    [SerializeField] private ProjectileShooter shooter;
+    [SerializeField] private SpriteRenderer _playerRenderer;
+    private float lastX = 0f;
+    private float lastY = -1f;
 
-    [SerializeField] private int lastFacing = 3;
 
     public void Start()
     {
+        _playerRenderer = player.gameObject.GetComponent<SpriteRenderer>();
+        shooter = player.gameObject.GetComponent<ProjectileShooter>();
         player.OnIdle += Idle;
         player.OnWalk += Walk;
         player.OnDeath += Die;
+        shooter.OnShoot += Shoot;
     }
 
     public void Die()
     {
         animator.SetTrigger("IsDead");
-        animator.SetBool("IsShooting", false);
-        animator.SetBool("IsMoving", false);
     }
 
     public void Idle(float x, float y)
     {
-        animator.SetBool("IsMoving", false);
-        animator.SetBool("IsShooting", false);
-        animator.SetInteger("Facing", lastFacing);
+        animator.ResetTrigger("IdleFront");
+        animator.ResetTrigger("IdleBack");
+        animator.ResetTrigger("IdleSide");
+
+        if (Mathf.Abs(lastX) > Mathf.Abs(lastY))
+        {
+            _playerRenderer.flipX = lastX < 0;
+            animator.SetTrigger("IdleSide");
+        }
+        else if (lastY > 0)
+        {
+            animator.SetTrigger("IdleBack");
+        }
+        else
+        {
+            animator.SetTrigger("IdleFront");
+        }
     }
 
     public void Walk(float x, float y)
     {
-        animator.SetBool("IsMoving", true);
-        animator.SetBool("IsShooting", false);
-        
-        if (Mathf.Abs(x) > Mathf.Abs(y))
+        if (x != 0 || y != 0)
         {
-            // destra o sinistra
-            lastFacing = x > 0 ? 0 : 0;
+            lastX = x;
+            lastY = y;
         }
-        else if (Mathf.Abs(y) > 0)
+
+        animator.ResetTrigger("WalkFront");
+        animator.ResetTrigger("WalkBack");
+        animator.ResetTrigger("WalkSide");
+
+        if (x != 0)
         {
-            // su o giù
-            lastFacing = y > 0 ? 1 : 3;
+            _playerRenderer.flipX = x < 0;
+            animator.SetTrigger("WalkSide");
+        }
+
+        if (y > 0)
+        {
+            animator.SetTrigger("WalkBack");
+        }
+        else if (y < 0)
+        {
+            animator.SetTrigger("WalkFront");
         }
     }
 
     public void Shoot(float x, float y)
     {
-        animator.SetBool("IsShooting", true);
-        animator.SetFloat("MoveX", x);
-        animator.SetFloat("MoveY", y);
+        if (x != 0 || y != 0)
+        {
+            lastX = x;
+            lastY = y;
+        }
+
+        animator.ResetTrigger("ShootFront");
+        animator.ResetTrigger("ShootBack");
+        animator.ResetTrigger("ShootSide");
+
+        if (Mathf.Abs(x) > Mathf.Abs(y))
+        {
+            _playerRenderer.flipX = x < 0;
+            animator.SetTrigger("ShootSide");
+        }else if (y > 0)
+        {
+            animator.SetTrigger("ShootBack");
+        }
+        else if (y < 0)
+        {
+            animator.SetTrigger("ShootFront");
+        }
     }
 }

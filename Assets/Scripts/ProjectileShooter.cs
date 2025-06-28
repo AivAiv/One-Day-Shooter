@@ -1,10 +1,12 @@
 using UnityEngine;
+using System;
 
 public class ProjectileShooter : MonoBehaviour
 {
     [Header("Projectile Settings")]
     [SerializeField] private GameObject projectilePrefab; // Assign in Inspector
     [SerializeField] private float projectileSpeed = 30f;
+    public event Action<float, float> OnShoot;
     
     private Camera _mainCamera;
     
@@ -18,7 +20,7 @@ public class ProjectileShooter : MonoBehaviour
     private void FireProjectile()
     {
         var mouseWorldPos = _mainCamera.ScreenToWorldPoint(
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y, 
+            new Vector3(Input.mousePosition.x, Input.mousePosition.y,
                 _mainCamera.transform.position.y - transform.position.y)
         );
 
@@ -31,5 +33,6 @@ public class ProjectileShooter : MonoBehaviour
 
         if (!projectile.TryGetComponent<Rigidbody2D>(out var rb)) return;
         rb.velocity = fireDirection * projectileSpeed;
+        OnShoot?.Invoke(fireDirection.x, fireDirection.y);
     }
 }
