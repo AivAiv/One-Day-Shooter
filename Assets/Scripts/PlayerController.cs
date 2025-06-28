@@ -53,9 +53,9 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!collision.gameObject.CompareTag("Zombie")) return;
+        _inputActions.Disable();
         IsDead = true;
         OnDeath?.Invoke();
-        _inputActions.Disable();
         StartCoroutine(StartDeathAnimation());
     }
 

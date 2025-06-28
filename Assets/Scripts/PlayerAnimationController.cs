@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
@@ -92,13 +90,24 @@ public class PlayerAnimationController : MonoBehaviour
         {
             _playerRenderer.flipX = x < 0;
             animator.SetTrigger("ShootSide");
-        }else if (y > 0)
+        }
+        else if (y > 0)
         {
             animator.SetTrigger("ShootBack");
         }
         else if (y < 0)
         {
             animator.SetTrigger("ShootFront");
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (player || shooter) {
+            player.OnIdle -= Idle;
+            player.OnWalk -= Walk;
+            player.OnDeath -= Die;
+            shooter.OnShoot -= Shoot;
         }
     }
 }
